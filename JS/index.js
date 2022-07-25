@@ -14,7 +14,7 @@ if (eleccionAroma == 'citrico') {
 */
 
 
-const ingreseNombre = prompt('Ingrese su Nombre').toLowerCase()
+/*const ingreseNombre = prompt('Ingrese su Nombre').toLowerCase()
 
 let ingreseNumero = Number(prompt('Ingresar Numero'));
 
@@ -22,6 +22,32 @@ let ingreseNumero = Number(prompt('Ingresar Numero'));
 for (let i = 1; i <= 10 ; i++) {
     let resultado = ingreseNumero + i ;
     console.log(ingreseNumero +" + " + i +" = "+ resultado);
+}*/
+
+
+//SIMULADOR INTERACTIVO
+
+const calcularCuotas= (montoTotal, cantidadCuotas) =>
+{
+    return montoTotal/cantidadCuotas
 }
+
+let montoTotal= Number(prompt('Por favor ingrese el monto TOTAL de su saldo'))
+
+let cantidadCuotas= Number(prompt('Ingrese en cuantas cuotas quiere realizar el pago : 6, 12 o 24 CUOTAS'))
+let resultado= calcularCuotas (montoTotal,cantidadCuotas)
+
+
+if (cantidadCuotas==6) {
+ alert('Usted seleccionó 6 cuotas de :  $' + resultado);
+} else if (cantidadCuotas==12) {
+    alert('Usted seleccionó 12 cuotas de :  $' + resultado);
+}else if (cantidadCuotas==24) {
+    alert('Usted seleccionó 24 cuotas de :  $' + resultado);
+}else {
+    alert ('La cantidad de cuotas ingesadas no está habilitada, pruebe nuevamente.')
+}
+
+
 
 
