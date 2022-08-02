@@ -27,7 +27,7 @@ for (let i = 1; i <= 10 ; i++) {
 
 //SIMULADOR INTERACTIVO
 
-const calcularCuotas= (montoTotal, cantidadCuotas) =>
+/* const calcularCuotas= (montoTotal, cantidadCuotas) =>
 {
     return montoTotal/cantidadCuotas
 }
@@ -48,6 +48,38 @@ if (cantidadCuotas==6) {
     alert ('La cantidad de cuotas ingesadas no está habilitada, pruebe nuevamente.')
 }
 
+ */
+
+
+class Producto {
+    constructor(prod, aroma, modelo, descripcion, precio) {
+        this.pord = prod
+        this.aroma = aroma
+        this.modelo = modelo
+        this.descripcion = descripcion
+        this.precio = precio
+    }
+
+    mostrarAroma() {
+        console.log('El aroma del producto seleccionado es: ' + this.aroma)
+    }
+}
+
+const producto1 = new Producto('Vela', 'Vainilla', 'Minimal', 'Vela de cera de soja artesanal', 2500)
+const producto2 = new Producto('Vela', 'Frutilla', 'Ceramica', 'Vela de cera de soja artesanal', 2800)
+const producto3= new Producto('Difusor', 'Bebé', 'Home Deco', 'Difusor de varillas en recipiente de vidrio', 3000)
+const producto4 = new Producto('Difusor', 'Fresias', 'Minimal', 'Difusor de varillas en recipiente de cerámica', 3500)
+const producto5 = new Producto('Perlas aromáticas', 'Cher', 'Minimal', 'Perlas de cerámica para perfumar ambientes', 2000)
+
+console.log(producto4)
+producto4.mostrarAroma()
 
 
 
+const productos = [producto1, producto2, producto3, producto4, producto5]
+console.log(productos)
+
+
+for (const producto of productos) {
+    console.log(producto.descripcion, producto.precio)
+}
